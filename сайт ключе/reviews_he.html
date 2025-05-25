@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>חוות דעת - Car Key</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f8f8f8;
+      color: #333;
+    }
+    header {
+      background: #fff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    header img {
+      max-width: 200px;
+    }
+    nav {
+      background: #e60000;
+      text-align: center;
+    }
+    nav a {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background: #cc0000;
+    }
+    .section {
+      padding: 30px 20px;
+      background: #fff;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h2 {
+      color: #e60000;
+    }
+    form textarea {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      resize: vertical;
+    }
+    form input[type=submit] {
+      background-color: #e60000;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .review {
+      background: #f0f0f0;
+      padding: 15px;
+      margin-top: 10px;
+      border-left: 4px solid #e60000;
+      border-radius: 5px;
+    }
+    .footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  
+<div style="position: absolute; top: 20px; right: 20px;">
+  <a href="index.html" title="Русский"><img src="https://flagcdn.com/w40/ru.png" alt="RU" style="width: 30px; margin-right: 5px;"></a>
+  <a href="index_he.html" title="עברית"><img src="https://flagcdn.com/w40/il.png" alt="HE" style="width: 30px;"></a>
+</div>
+<header>
+    <img src="photo_5873079971977742113_y.jpg" alt="Car Key logo">
+  </header>
+  <nav>
+    <a href="index_he.html">דף הבית</a>
+    <a href="reviews.html">חוות דעת</a>
+    <a href="#contact">צור קשר</a>
+  </nav>
+
+  <div class="section">
+    <h2>השאר חוות דעת</h2>
+    <form id="reviewForm">
+      <textarea name="review" placeholder="כתוב כאן..." required></textarea><br>
+      <input type="submit" value="שלח">
+    </form>
+
+    <div id="reviewsContainer">
+      <div class="review">🔑 שירות מעולה! הם הכינו במהירות מפתח שכפול. -אנה</div>
+      <div class="review">🚗 הגענו לאתר ותיקנו הכל. מאוד נוח! - מיכאיל</div>
+    </div>
+  </div>
+
+    <a href="https://wa.me/+972539027528" target="_blank" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 60px; height: 60px;">
+</a> 
+
+  <a href="https://www.facebook.com/messages/t/611506028703170" target="_blank" style="
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background-color: #0084FF;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+">
+  💬 Написать в Messenger
+</a>
+  <div class="footer">
+    © 2025 Car Key | כל הזכויות שמורות
+  </div>
+
+  <script>
+    const form = document.getElementById('reviewForm');
+    const container = document.getElementById('reviewsContainer');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const textarea = form.querySelector('textarea');
+      const review = textarea.value.trim();
+      if (review) {
+        const div = document.createElement('div');
+        div.className = 'review';
+        div.textContent = '📝 ' + review;
+        container.prepend(div);
+        textarea.value = '';
+      }
+    });
+  </script>
+</body>
+</html>
